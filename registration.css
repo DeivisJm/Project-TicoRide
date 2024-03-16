@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+#centered-image {
+    max-width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.container {
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: none;
+    opacity: 1;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#register-link {
+    text-align: center;
+}
+
+#register-link a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+@media (max-width: 767px) {
+    .jumbotron h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .product img {
+        width: 100%;
+    }
+}

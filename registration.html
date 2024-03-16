@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <img id="centered-image"
+        src="https://png.pngtree.com/element_our/20200630/ourmid/pngtree-car-travel-image_2275197.jpg"
+        alt="Car Travel Image">
+
+    <div class="container">
+        <h2>Registro de usuarios</h2>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="firstname">Nombre:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Ingrese su nombre" required>
+            <span id="firstname-error" class="error"></span>
+
+            <label for="lastname">Apellidos:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido" required>
+            <span id="lastname-error" class="error"></span>
+
+            <label for="phone">Numero celular:</label>
+            <input type="text" id="phone" name="phone" placeholder="Ingrese su numero celular" required>
+            <span id="phone-error" class="error"></span>
+
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Ingrese su nombre de usuario" required>
+            <span id="username-error" class="error"></span>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            <span id="password-error" class="error"></span>
+
+            <label for="confirm-password">Confirmacion de Contraseña:</label>
+            <input type="password" id="confirm-password" name="confirm-password"
+                placeholder="Ingrese su confirmacion de Contraseña" required>
+            <span id="confirm-password-error" class="error"></span>
+
+            <input type="submit" value="Registrar">
+        </form>
+        <p id="message"></p>
+        <div id="register-link">
+            <p>Si ya tienes una cuenta, <a href="authentication_page.html">Ingresa aqui</a>.</p>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var users = [];
+
+        function validateForm() {
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+            var phone = document.getElementById("phone").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            var isValid = true;
+
+
+            // validations
+            if (firstname.trim() === "") {
+                document.getElementById("firstname-error").innerHTML = "Por favor, ingrese su nombre.";
+                isValid = false;
+            } else {
+                document.getElementById("firstname-error").innerHTML = "";
+            }
+
+            if (lastname.trim() === "") {
+                document.getElementById("lastname-error").innerHTML = "Por favor, ingrese su apellido.";
+                isValid = false;
+            } else {
+                document.getElementById("lastname-error").innerHTML = "";
+            }
+
+            if (phone.trim() === "") {
+                document.getElementById("phone-error").innerHTML = "Por favor, ingrese su número de teléfono.";
+                isValid = false;
+            } else {
+                document.getElementById("phone-error").innerHTML = "";
+            }
+
+            if (username.trim() === "") {
+                document.getElementById("username-error").innerHTML = "Por favor, ingrese su nombre de usuario.";
+                isValid = false;
+            } else {
+                document.getElementById("username-error").innerHTML = "";
+            }
+
+            if (password.trim() === "") {
+                document.getElementById("password-error").innerHTML = "Por favor, ingrese su contraseña.";
+                isValid = false;
+            } else {
+                document.getElementById("password-error").innerHTML = "";
+            }
+
+            if (confirmPassword.trim() === "") {
+                document.getElementById("confirm-password-error").innerHTML = "Por favor, confirme su contraseña.";
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                document.getElementById("confirm-password-error").innerHTML = "Las contraseñas no coinciden.";
+                isValid = false;
+            } else {
+                document.getElementById("confirm-password-error").innerHTML = "";
+            }
+
+            // store users in local storage
+            if (localStorage.getItem('users') === null) {
+                localStorage.setItem('users', JSON.stringify([]));
+            }
+            var users = JSON.parse(localStorage.getItem('users'));
+
+
+            // if the form is valid, add user to the array
+            if (isValid) {
+                var newUser = {
+                    firstname: firstname,
+                    lastname: lastname,
+                    phone: phone,
+                    username: username,
+                    password: password
+                };
+                users.push(newUser);
+                window.location.href = "authentication_page.html";
+                return false;
+            } else {
+                document.getElementById("message").innerHTML = "Usuario no registrado.";
+            }
+
+            return isValid;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
