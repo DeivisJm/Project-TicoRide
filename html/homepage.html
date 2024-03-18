@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticos-Ride</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="../css/homepage.css">
 
 </head>
 
 <body>
     <img id="centered-image"
-        src="https://png.pngtree.com/element_our/20200630/ourmid/pngtree-car-travel-image_2275197.jpg"
+        src="../img/Logo.png"
         alt="Car Travel Image">
 
 
@@ -51,37 +51,8 @@
         <p id="message"></p>
     </div>
 
-    <script>
-        // Function to save a new trip in the table
-        function saveTrip() {
-            var origin = document.getElementById("origin").value;
-            var destination = document.getElementById("destination").value;
+    <script type="text/javascript" src="../js/home.js"></script>
 
-            // Validate if both fields are filled
-            if (origin.trim() === '' || destination.trim() === '') {
-                alert("Ingrese ambos datos");
-                return;
-            }
-
-            // Create a new row in the table
-            var table = document.getElementById("tripTable");
-            var newRow = table.insertRow();
-            var cellUser = newRow.insertCell(0);
-            var cellStart = newRow.insertCell(1);
-            var cellEnd = newRow.insertCell(2);
-            var cellView = newRow.insertCell(3);
-
-            // Add origin and destination values to cells
-            cellUser.innerHTML = "Invitado";
-            cellStart.innerHTML = origin;
-            cellEnd.innerHTML = destination;
-            cellView.innerHTML = '<a href="#">View</a>';
-
-            // Clear input fields after saving the trip
-            document.getElementById("origin").value = '';
-            document.getElementById("destination").value = '';
-        }
-    </script>
 </body>
 
 </html>

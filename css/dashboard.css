@@ -1,0 +1,36 @@
+.image-size {
+    height: 150px;
+    width: 90%;;
+}
+.image-user{
+    width: 30px;
+    height: 30px;
+}
+.menu-item {
+    font-weight: bold;
+    color: #636363;
+    border: 1px solid #636363;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #dadada;
+}
+
+#dashboard{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#rides{
+    border-right: 0px solid;
+    border-left: 0px solid;
+}
+#settings{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.active{
+    background-color: white;
+}
+#username{
+    color: orange;
+    font-weight: bold;
+}

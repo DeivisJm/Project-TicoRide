@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-start flex-row">
+                <div class="d-flex flex-column">
+                    <div class="p-2">
+                        <img class="image-size"
+                            src="../img/Logo.png"
+                            alt="Car Travel Image">
+                    </div>
+                    <div class="p-2">
+
+                        <div class="relative" style="display: flex;">
+                            <div class="menu-item" id="dashboard">Panel</div>
+                            <div class="menu-item" id="rides">Viajes</div>
+                            <div class="menu-item" id="settings">
+                                Ajustes
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <h4 id="currentSection"></h4>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col d-flex justify-content-end mt-auto p-2">
+                Welcome&nbsp;
+                <p id="username"></p>
+                <img class="image-user"
+                    src="../img/user.jpg"
+                    alt="Car Travel Image">
+            </div>
+        </div>
+
+        <div id="rides-view">
+            <h8>Viajes</h8>
+
+        </div>
+        <div id="panel-view">
+            <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
+                <h8>Mis viajes</h8>
+                <thead class="thead-light">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Inicio</th>
+                        <th>Fin</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cine</td>
+                        <td>17/10/2024 13:15</td>
+                        <td>17/10/2024 14:15</td>
+                        <td>
+                            <a onclick="editarViaje(this)" href="#">Editar</a> --
+                            <a onclick="eliminarViaje(this)" href="#">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="settings-view">
+            <h8>Ajustes</h8>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
