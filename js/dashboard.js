@@ -1,6 +1,6 @@
 function editarViaje(link) {
 
-    var row = link.closest('tr'); // Obtener la fila actual
+    var row = link.closest('tr'); // Get the current row
     var nombre = row.cells[0].innerText;
     var inicio = row.cells[1].innerText;
     var fin = row.cells[2].innerText;
@@ -8,8 +8,8 @@ function editarViaje(link) {
 }
 
 function eliminarViaje(link) {
-    var row = link.closest('tr'); // Obtener la fila actual
-    row.remove(); // Eliminar la fila
+    var row = link.closest('tr'); // Get the current row
+    row.remove(); // Delete row
     alert("Viaje eliminado correctamente.");
 }
 const dashboardMenu = document.getElementById('dashboard');
@@ -25,8 +25,9 @@ viajesView.style.display = "none";
 settingsView.style.display = "none";
 const username = localStorage.getItem('username');
 document.getElementById('username').innerHTML = username;
+
 dashboardMenu.addEventListener('click', () => {
-    currentSection.textContent = "Panel";
+    currentSection.textContent = "Dashboard";
     viajesView.style.display = "none";
     settingsView.style.display = "none";
     panelView.style.display = "block";

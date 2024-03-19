@@ -42,61 +42,83 @@
             </div>
         </div>
 
+
+        <div id="panel-view" class="table-container">
+            <a href="#">Dashboard</a>
+            <span class="arrow">></span>
+            <h6>My Rides</h6>
+            <div class="card">
+                <div class="card-body">
+                    <p class="title">Your current list of Rides</p>
+                </div>
+                <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brete</td>
+                            <td>Barrio Los Angeles</td>
+                            <td>Ciudad Quesada</td>
+                            <td>
+                                <a onclick="editarViaje(this)" href="#">Edit</a> -
+                                <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Casa</td>
+                            <td>Ciudad Quesada</td>
+                            <td>Los Angeles</td>
+                            <td>
+                                <a onclick="editarViaje(this)" href="#">Edit</a> -
+                                <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Oficina Chepe</td>
+                            <td>Ciudad Quesada</td>
+                            <td>San Pedro</td>
+                            <td>
+                                <a onclick="editarViaje(this)" href="#">Edit</a> -
+                                <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
         <div id="rides-view">
-            <h8>Rides</h8>
+            <a href="#">Dashboard</a>
+            <span class="arrow">></span>
+            <a href="#">Rides</a>
+            <span class="arrow">> Edit</span>
 
         </div>
-        <div id="panel-view">
-            <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
-                <h8>My Rides</h8>
-                <thead class="thead-light">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Start</th>
-                        <th>End</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Brete</td>
-                        <td>Barrio Los Angeles</td>
-                        <td>Ciudad Quesada</td>
-                        <td>
-                            <a onclick="editarViaje(this)" href="#">Edit</a> -
-                            <a onclick="eliminarViaje(this)" href="#">Delete</a>
-                        </td>
 
-                    </tr>
-                </tbody>
-
-                <tr>
-                    <td>Casa</td>
-                    <td>Ciudad Quesada</td>
-                    <td>Los Angeles</td>
-                    <td>
-                        <a onclick="editarViaje(this)" href="#">Edit</a> -
-                        <a onclick="eliminarViaje(this)" href="#">Delete</a>
-                    </td>
-
-                </tr>
-
-                <tbody>
-                    <tr>
-                        <td>Oficina Chepe</td>
-                        <td>Ciudad Quesada</td>
-                        <td>San Pedro</td>
-                        <td>
-                            <a onclick="editarViaje(this)" href="#">Edit</a> -
-                            <a onclick="eliminarViaje(this)" href="#">Delete</a>
-                        </td>
-
-                    </tr>
-                </tbody>
-            </table>
-        </div>
         <div id="settings-view">
-            <h8>Ajustes</h8>
+            <a href="#">Dashboard</a>
+            <span class="arrow">> Settings</span>
+            <div class="settings">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullname" placeholder="Input text">
+                <label for="speedAverage" class="form-label">speed Average</label>
+                <input type="text" class="form-control" id="speedAverage" placeholder="Input text">
+                <label for="aboutMe" class="form-label">About Me</label>
+                <div class="aboutMe">
+                    <textarea id="edit" placeholder="Something about me goes here"></textarea>
+                    <div class="button">
+                        <a href="dashboard.html">Cancel</a>
+                        <button class="save">Add</button>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

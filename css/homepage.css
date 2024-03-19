@@ -12,13 +12,30 @@ body {
 }
 
 .container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+table {
     max-width: 800px;
     margin: 50px auto;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
+
 }
+
+h5 {
+    text-align: center;
+}
+
 
 h2 {
     text-align: center;
@@ -41,18 +58,40 @@ input[type="text"] {
 }
 
 .btn-block {
+    position: absolute;
     width: 20%;
+    top: 50;
+    right: 0;
     background-color: #7e7a7a;
     color: #000000;
+    font-weight: bold;
+    transform: translateY(100%);
+
+    
 }
 
 
 
-table {
-    width: 50%;
-    border-collapse: collapse;
-    margin-top: 20px;
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #2320bd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
 }
+
+
+
 
 th,
 td {
