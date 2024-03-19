@@ -17,18 +17,15 @@
             <div class="col d-flex justify-content-start flex-row">
                 <div class="d-flex flex-column">
                     <div class="p-2">
-                        <img class="image-size"
-                            src="../img/Logo.png"
-                            alt="Car Travel Image">
+                        <img class="image-size" src="../img/Logo.png" alt="Car Travel Image">
                     </div>
                     <div class="p-2">
 
                         <div class="relative" style="display: flex;">
-                            <div class="menu-item" id="dashboard">Panel</div>
-                            <div class="menu-item" id="rides">Viajes</div>
-                            <div class="menu-item" id="settings">
-                                Ajustes
-                            </div>
+                            <div class="menu-item" id="dashboard">Dashboard</div>
+                            <div class="menu-item" id="rides">Rides</div>
+                            <div class="menu-item" id="settings"> Settings</div>
+
                         </div>
                     </div>
                     <div class="p-2">
@@ -39,38 +36,61 @@
 
             </div>
             <div class="col d-flex justify-content-end mt-auto p-2">
-                Welcome&nbsp;
+                Welcome &nbsp;
                 <p id="username"></p>
-                <img class="image-user"
-                    src="../img/user.jpg"
-                    alt="Car Travel Image">
+                <img class="image-user" src="../img/user.jpg" alt="Car Travel Image">
             </div>
         </div>
 
         <div id="rides-view">
-            <h8>Viajes</h8>
+            <h8>Rides</h8>
 
         </div>
         <div id="panel-view">
             <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
-                <h8>Mis viajes</h8>
+                <h8>My Rides</h8>
                 <thead class="thead-light">
                     <tr>
                         <th>Nombre</th>
-                        <th>Inicio</th>
-                        <th>Fin</th>
-                        <th>Acciones</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>cine</td>
-                        <td>17/10/2024 13:15</td>
-                        <td>17/10/2024 14:15</td>
+                        <td>Brete</td>
+                        <td>Barrio Los Angeles</td>
+                        <td>Ciudad Quesada</td>
                         <td>
-                            <a onclick="editarViaje(this)" href="#">Editar</a> --
-                            <a onclick="eliminarViaje(this)" href="#">Eliminar</a>
+                            <a onclick="editarViaje(this)" href="#">Edit</a> -
+                            <a onclick="eliminarViaje(this)" href="#">Delete</a>
                         </td>
+
+                    </tr>
+                </tbody>
+
+                <tr>
+                    <td>Casa</td>
+                    <td>Ciudad Quesada</td>
+                    <td>Los Angeles</td>
+                    <td>
+                        <a onclick="editarViaje(this)" href="#">Edit</a> -
+                        <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                    </td>
+
+                </tr>
+
+                <tbody>
+                    <tr>
+                        <td>Oficina Chepe</td>
+                        <td>Ciudad Quesada</td>
+                        <td>San Pedro</td>
+                        <td>
+                            <a onclick="editarViaje(this)" href="#">Edit</a> -
+                            <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                        </td>
+
                     </tr>
                 </tbody>
             </table>

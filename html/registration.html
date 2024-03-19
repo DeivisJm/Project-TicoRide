@@ -10,43 +10,40 @@
 </head>
 
 <body>
-    <img id="centered-image"
-        src="../img/Logo.png"
-        alt="Car Travel Image">
+    <img id="centered-image" src="../img/Logo.png" alt="Car Travel Image">
 
     <div class="container">
-        <h2>Registro de usuarios</h2>
         <form action="#" method="post" onsubmit="return validateForm()">
-            <label for="firstname">Nombre:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Ingrese su nombre" required>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Input text" required>
             <span id="firstname-error" class="error"></span>
 
-            <label for="lastname">Apellidos:</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Ingrese su apellido" required>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Input text" required>
             <span id="lastname-error" class="error"></span>
 
-            <label for="phone">Numero celular:</label>
-            <input type="text" id="phone" name="phone" placeholder="Ingrese su numero celular" required>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="(XXX) XXX-XXXX" required>
             <span id="phone-error" class="error"></span>
 
-            <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" placeholder="Ingrese su nombre de usuario" required>
+            <label for="username">  Username:</label>
+            <input type="text" id="username" name="username" placeholder="Input text" required>
             <span id="username-error" class="error"></span>
 
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Input text" required>
             <span id="password-error" class="error"></span>
 
-            <label for="confirm-password">Confirmacion de Contraseña:</label>
+            <label for="confirm-password">Repeat Password:</label>
             <input type="password" id="confirm-password" name="confirm-password"
-                placeholder="Ingrese su confirmacion de Contraseña" required>
+                placeholder="Input text" required>
             <span id="confirm-password-error" class="error"></span>
 
-            <input type="submit" value="Registrar">
+            <input type="submit" value="Registrer">
         </form>
         <p id="message"></p>
         <div id="register-link">
-            <p>Si ya tienes una cuenta, <a href="authentication_page.html">Ingresa aqui</a>.</p>
+            <p>Alredy an User? <a href="authentication_page.html">Login Here</a>.</p>
         </div>
     </div>
 
