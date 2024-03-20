@@ -62,14 +62,14 @@ input[type="text"] {
     width: 20%;
     top: 50;
     right: 0;
-    background-color: #7e7a7a;
-    color: #000000;
+    color: #fff;
+    background-color: #767f87;
+    border-color: #000000;
     font-weight: bold;
-    transform: translateY(100%);
+    transform: translateY(25%);
 
     
 }
-
 
 
 

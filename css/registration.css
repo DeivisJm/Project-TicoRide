@@ -59,18 +59,3 @@ input[type="submit"] {
     font-size: 0.8em;
 }
 
-@media (max-width: 767px) {
-    .jumbotron h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    .jumbotron p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-
-    .product img {
-        width: 100%;
-    }
-}

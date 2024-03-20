@@ -38,7 +38,7 @@ dashboardMenu.addEventListener('click', () => {
 });
 
 ridesMenu.addEventListener('click', () => {
-    currentSection.textContent = "Viajes";
+    currentSection.textContent = "Rides";
     viajesView.style.display = "block";
     settingsView.style.display = "none";
     panelView.style.display = "none";
@@ -48,7 +48,7 @@ ridesMenu.addEventListener('click', () => {
 });
 
 settingsMenu.addEventListener('click', () => {
-    currentSection.textContent = "Ajustes";
+    currentSection.textContent = "Settings";
     viajesView.style.display = "none";
     settingsView.style.display = "block";
     panelView.style.display = "none";
