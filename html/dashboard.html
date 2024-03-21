@@ -100,28 +100,45 @@
             <a href="#">Rides</a>
             <div class="info-rides">
 
+                <div class="labelsRides">
+                    <div class="labelName">
 
-                <label for="ridename" class="form-label">Ride Name</label>
-                <input type="text" class="form-control" id="rideName" placeholder="Brete">
-                <label for="startfrom" class="form-label">Start From</label>
-                <input type="text" class="form-control" id="startFrom" placeholder="Barrio Los Angeles, Ciudad Quesada">
-                <label for="end" class="form-label">End</label>
-                <input type="text" class="form-control" id="end" placeholder="Mercado Municipal, Ciudad Quesada">
-                <label for="description" class="form-label">Description</label>
+                        <label for="ridename" class="form-label">Ride Name</label>
+                        <input type="text" class="form-control rideName" id="rideName" placeholder="Brete">
 
-                <div class="description">
-                    <textarea id="description"
-                        placeholder="This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building"></textarea>
-                    <h3>When</h3>
-                    <div class="labels">
-                        <div class="col">
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <label for="startfrom" class="form-label">Start From</label>
+                            <input type="text" class="form-control  startFromlabel" id="startFrom"
+                                placeholder="Barrio Los Angeles, Ciudad Quesada">
+                        </div>
+                        <div class="p-2">
+                            <label for="end" class="form-label">End</label>
+                            <input type="text" class="form-control" id="end"
+                                placeholder="Mercado Municipal, Ciudad Quesada">
+
+                        </div>
+
+                    </div>
+                    <div class="labelsDescription">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="" id="" cols="80"
+                            rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
+                    </div>
+                </div>
+                <hr>
+                <h3>When</h3>
+                <div class="labelsTime">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
                             <label for="departure" class="form-label">Departure</label>
                             <input type="time" class="form-control" id="departure" value="06:45">
                             <label for="arrival" class="form-label">Estimated Arrival</label>
                             <input type="time" class="form-control" id="arrival" value="07:05">
-                            <a class="cancel" href="dashboard.html">Cancel</a>
                         </div>
-                        <div class="col">
+                        <div class="p-2">
                             <label for="SelectDays" class="form-label">Select Days</label>
                             <div id="days">
                                 <input type="checkbox" id="monday" name="day" value="Monday">
@@ -138,11 +155,14 @@
                                 <label for="saturday">Saturday</label><br>
                                 <input type="checkbox" id="sunday" name="day" value="Sunday">
                                 <label for="sunday">Sunday</label><br>
-                                <button class="save">save</button>
                             </div>
+
                         </div>
                     </div>
+                    <a class="cancel" href="dashboard.html">Cancel</a>
+                    <button class="save">Save</button>
                 </div>
+
             </div>
         </div>
 
@@ -150,7 +170,7 @@
             <a href="#">Dashboard</a>
             <span class="arrow">> Settings</span>
             <div class="settings">
-                <label for="fullname" class="form-label">Full Name</label>
+                <label for="fullname" class="form-label  ">Full Name</label>
                 <input type="text" class="form-control" id="fullname" placeholder="Input text">
                 <label for="speedAverage" class="form-label">speed Average</label>
                 <input type="text" class="form-control" id="speedAverage" placeholder="Input text">
@@ -158,8 +178,8 @@
                 <div class="aboutMe">
                     <textarea id="edit" placeholder="Something about me goes here"></textarea>
                     <div class="button">
-                        
-                        <a href="dashboard.html">Cancel</a> 
+
+                        <a href="dashboard.html">Cancel</a>
                         <button class="save">Add</button>
                     </div>
                 </div>

@@ -3,6 +3,9 @@
     font-weight: bold;
 }
 
+
+
+
 /*Dashboard*/
 .image-size {
     height: 100px;
@@ -22,6 +25,7 @@
     padding-left: 8px;
     padding-right: 8px;
     background-color: #dadada;
+    cursor: pointer;
 }
 
 #dashboard {
@@ -40,6 +44,29 @@
     border-bottom-right-radius: 10px;
 }
 
+.labelsRides {
+    width: 600px;
+}
+
+.labelName {
+
+    width: 100px;
+}
+
+.endRides {
+    margin-left: 500px;
+}
+
+.labelsDescription {
+    width: 200px;
+    height: 100px;
+}
+
+.startFromlabel {
+
+    width: 300px;
+    margin-right: 10px;
+}
 
 .settings {
     width: 50%;
@@ -62,6 +89,7 @@
 .save {
     background-color: rgb(38, 188, 38);
     color: white;
+    font-weight: bold;
     padding: 3px 20px;
     /*Curvas en los botones  */
     border-top-left-radius: 10px;
@@ -76,20 +104,12 @@
     background-color: white;
 }
 
-.info-rides {
-    margin-top: 5%;
-    margin-left: 11%;
-}
-
-.info-rides .form-label:nth-child(5) {
-    margin: 0 auto;
-}
 
 /*Settings*/
 .info .form-label:nth-child(3) {
     font-size: 18px;
-
 }
+
 
 
 
