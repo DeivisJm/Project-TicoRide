@@ -6,6 +6,7 @@ function validateForm() {
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirm-password").value;
 
+
     var isValid = true;
 
 
@@ -65,6 +66,7 @@ function validateForm() {
 
     }
 
+
     // if the form is valid, add user to the array
     if (isValid) {
         users.push(newUser)
@@ -75,6 +77,7 @@ function validateForm() {
             users = JSON.parse(localStorage.getItem('users'));
             users.push(newUser);
             localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('username', username);
         }
         window.location.href = "authentication_page.html";
         return false;
@@ -82,5 +85,15 @@ function validateForm() {
         document.getElementById("message").innerHTML = "Usuario no registrado.";
     }
 
+     // create a userName 
+     var username = firstname.trim() + " " + lastname.trim();
+
+
+     // update the value of the label with the username
+     document.querySelector('label[for="fullname"]').innerHTML = "Full Name: " + username;
+
+
     return isValid;
+    
 }
+

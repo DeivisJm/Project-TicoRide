@@ -57,22 +57,18 @@ input[type="text"] {
     border: 1px solid #ccc;
 }
 
-.btn-block {
+.btn-primary {
+    margin-bottom: 20px;
+    margin-left: 30px;
     position: absolute;
     width: 20%;
-    top: 50;
-    right: 0;
+    top: 200;
+    left: 50;
     color: #fff;
     background-color: #767f87;
     border-color: #000000;
-    font-weight: bold;
-    transform: translateY(25%);
-
-    
-}
-
-
-
+    font-weight: bold; 
+} 
 
 
 button {
@@ -89,9 +85,6 @@ button {
     right: 0;
 
 }
-
-
-
 
 th,
 td {

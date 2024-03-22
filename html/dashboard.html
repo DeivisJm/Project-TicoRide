@@ -43,126 +43,153 @@
         </div>
 
 
+
         <div id="panel-view" class="table-container">
             <a href="#">Dashboard</a>
             <span class="arrow">></span>
             <h6>My Rides</h6>
             <div class="card">
                 <div class="card-body">
-                    <p class="title">Your current list of Rides</p>
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <p class="title">Your current list of Rides</p>
+                        </div>
+                        <div class="p-2">
+                            <input type="submit" value="+" onclick="addRow()">
+                        </div>
+                    </div>
+                    <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
+
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Brete</td>
+                                <td>Barrio Los Angeles</td>
+                                <td>Ciudad Quesada</td>
+                                <td>
+                                    <a onclick="editarViaje(this)" href="#">Edit</a> -
+                                    <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Casa</td>
+                                <td>Ciudad Quesada</td>
+                                <td>Los Angeles</td>
+                                <td>
+                                    <a onclick="editarViaje(this)" href="#">Edit</a> -
+                                    <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Oficina Chepe</td>
+                                <td>Ciudad Quesada</td>
+                                <td>San Pedro</td>
+                                <td>
+                                    <a onclick="editarViaje(this)" href="#">Edit</a> -
+                                    <a onclick="eliminarViaje(this)" href="#">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
-                <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Name</th>
-                            <th>Start</th>
-                            <th>End</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Brete</td>
-                            <td>Barrio Los Angeles</td>
-                            <td>Ciudad Quesada</td>
-                            <td>
-                                <a onclick="editarViaje(this)" href="#">Edit</a> -
-                                <a onclick="eliminarViaje(this)" href="#">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Casa</td>
-                            <td>Ciudad Quesada</td>
-                            <td>Los Angeles</td>
-                            <td>
-                                <a onclick="editarViaje(this)" href="#">Edit</a> -
-                                <a onclick="eliminarViaje(this)" href="#">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Oficina Chepe</td>
-                            <td>Ciudad Quesada</td>
-                            <td>San Pedro</td>
-                            <td>
-                                <a onclick="editarViaje(this)" href="#">Edit</a> -
-                                <a onclick="eliminarViaje(this)" href="#">Delete</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
+
 
 
         <div id="rides-view">
             <a href="#">Dashboard</a>
             <span class="arrow">></span>
             <a href="#">Rides</a>
-            <div class="info-rides">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="info-rides">
+                        <div class="labelsRides">
+                            <div class="labelName">
 
-                <div class="labelsRides">
-                    <div class="labelName">
+                                <label for="ridename" class="form-label">Ride Name</label>
+                                <input type="text" class="form-control rideName" id="rideName" placeholder="">
 
-                        <label for="ridename" class="form-label">Ride Name</label>
-                        <input type="text" class="form-control rideName" id="rideName" placeholder="Brete">
-
-                    </div>
-
-                    <div class="d-flex">
-                        <div class="mr-auto p-2">
-                            <label for="startfrom" class="form-label">Start From</label>
-                            <input type="text" class="form-control  startFromlabel" id="startFrom"
-                                placeholder="Barrio Los Angeles, Ciudad Quesada">
-                        </div>
-                        <div class="p-2">
-                            <label for="end" class="form-label">End</label>
-                            <input type="text" class="form-control" id="end"
-                                placeholder="Mercado Municipal, Ciudad Quesada">
-
-                        </div>
-
-                    </div>
-                    <div class="labelsDescription">
-                        <label for="description" class="form-label">Description</label>
-                        <textarea name="" id="" cols="80"
-                            rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
-                    </div>
-                </div>
-                <hr>
-                <h3>When</h3>
-                <div class="labelsTime">
-                    <div class="d-flex">
-                        <div class="mr-auto p-2">
-                            <label for="departure" class="form-label">Departure</label>
-                            <input type="time" class="form-control" id="departure" value="06:45">
-                            <label for="arrival" class="form-label">Estimated Arrival</label>
-                            <input type="time" class="form-control" id="arrival" value="07:05">
-                        </div>
-                        <div class="p-2">
-                            <label for="SelectDays" class="form-label">Select Days</label>
-                            <div id="days">
-                                <input type="checkbox" id="monday" name="day" value="Monday">
-                                <label for="monday">Monday</label><br>
-                                <input type="checkbox" id="tuesday" name="day" value="Tuesday">
-                                <label for="tuesday">Tuesday</label><br>
-                                <input type="checkbox" id="wednesday" name="day" value="Wednesday">
-                                <label for="wednesday">Wednesday</label><br>
-                                <input type="checkbox" id="thursday" name="day" value="Thursday">
-                                <label for="thursday">Thursday</label><br>
-                                <input type="checkbox" id="friday" name="day" value="Friday">
-                                <label for="friday">Friday</label><br>
-                                <input type="checkbox" id="saturday" name="day" value="Saturday">
-                                <label for="saturday">Saturday</label><br>
-                                <input type="checkbox" id="sunday" name="day" value="Sunday">
-                                <label for="sunday">Sunday</label><br>
                             </div>
 
-                        </div>
-                    </div>
-                    <a class="cancel" href="dashboard.html">Cancel</a>
-                    <button class="save">Save</button>
-                </div>
+                            <div class="d-flex">
+                                <div class="mr-auto p-2">
+                                    <label for="startfrom" class="form-label">Start From</label>
+                                    <input type="text" class="form-control startFromlabel" id="startFrom"
+                                        placeholder="">
+                                </div>
+                                <div class="p-2">
+                                    <label for="end" class="form-label">End</label>
+                                    <input type="text" class="form-control endRides" id="end"
+                                        placeholder="">
 
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="labelsDescription">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea name="" id="" cols="80"
+                                rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
+                        </div>
+                        <hr>
+                        <h3>When</h3>
+                        <div class="labelsTime">
+                            <div class="d-flex">
+                                <div class="row align-items-start ml-3">
+                                    <label for="departure" class="form-label">Departure</label>
+                                    <input type="time" class="form-control" id="departure" value="06:45">
+                                    <label for="arrival" class="form-label">Estimated Arrival</label>
+                                    <input type="time" class="form-control" id="arrival" value="07:05">
+                                </div>
+                                <div class="p-4">
+                                    <label for="SelectDays" class="form-label">Select Days</label>
+                                    <div id="days">
+                                        <input type="checkbox" id="monday" name="day" value="Monday">
+                                        <label for="monday">Monday</label><br>
+                                        <input type="checkbox" id="tuesday" name="day" value="Tuesday">
+                                        <label for="tuesday">Tuesday</label><br>
+                                        <input type="checkbox" id="wednesday" name="day" value="Wednesday">
+                                        <label for="wednesday">Wednesday</label><br>
+                                        <input type="checkbox" id="thursday" name="day" value="Thursday">
+                                        <label for="thursday">Thursday</label><br>
+                                        <input type="checkbox" id="friday" name="day" value="Friday">
+                                        <label for="friday">Friday</label><br>
+                                        <input type="checkbox" id="saturday" name="day" value="Saturday">
+                                        <label for="saturday">Saturday</label><br>
+                                        <input type="checkbox" id="sunday" name="day" value="Sunday">
+                                        <label for="sunday">Sunday</label><br>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="mr-auto p-2">
+                                    <a class="cancel" href="dashboard.html">Cancel</a>
+                                </div>
+                                <div class="p-2">
+                                    <button class="Save" onclick="guardarEdicion(this)">Save</button>
+                                </div>
+                                
+                                
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
             </div>
         </div>
 
@@ -170,18 +197,26 @@
             <a href="#">Dashboard</a>
             <span class="arrow">> Settings</span>
             <div class="settings">
-                <label for="fullname" class="form-label  ">Full Name</label>
-                <input type="text" class="form-control" id="fullname" placeholder="Input text">
-                <label for="speedAverage" class="form-label">speed Average</label>
-                <input type="text" class="form-control" id="speedAverage" placeholder="Input text">
+                <label for="fullname" class="form-label ">Full Name</label>
+                <div class="fullname">
+                    <textarea id="fullname" placeholder=" "></textarea>
+                </div>
+                <label for="speedAverage" class="form-label">Speed Average</label>
+                <div class="speedAverage">
+                    <textarea id="edit" placeholder=60km/h></textarea>
+                </div>
                 <label for="aboutMe" class="form-label">About Me</label>
                 <div class="aboutMe">
                     <textarea id="edit" placeholder="Something about me goes here"></textarea>
-                    <div class="button">
-
+                </div>
+                <div class="d-flex">
+                    <div class="mr-auto p-2">
                         <a href="dashboard.html">Cancel</a>
-                        <button class="save">Add</button>
                     </div>
+                    <div class="p-2">
+                        <button class="Save">Save</button>
+                    </div>
+
                 </div>
             </div>
 

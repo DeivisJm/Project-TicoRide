@@ -1,17 +1,14 @@
-#username {
-    color: orange;
-    font-weight: bold;
-}
-
-
-
-
-/*Dashboard*/
 .image-size {
     height: 100px;
     width: 50%;
     ;
 }
+
+#username {
+    color: orange;
+    font-weight: bold;
+}
+
 
 .image-user {
     width: 35px;
@@ -33,7 +30,6 @@
     border-bottom-left-radius: 10px;
 }
 
-/*Rides*/
 #rides {
     border-right: 0px solid;
     border-left: 0px solid;
@@ -44,28 +40,30 @@
     border-bottom-right-radius: 10px;
 }
 
+/*Rides*/
+
+
+.startFromlabel {
+    width: 200px;
+    margin-right: 13px;
+
+}
+
 .labelsRides {
-    width: 600px;
+    width: 300px;
 }
 
 .labelName {
-
-    width: 100px;
+    width: 200px;
 }
 
 .endRides {
-    margin-left: 500px;
+    width: 200px;
 }
 
 .labelsDescription {
-    width: 200px;
+    width: 100px;
     height: 100px;
-}
-
-.startFromlabel {
-
-    width: 300px;
-    margin-right: 10px;
 }
 
 .settings {
@@ -86,7 +84,7 @@
     justify-content: space-between;
 }
 
-.save {
+.Save{
     background-color: rgb(38, 188, 38);
     color: white;
     font-weight: bold;
@@ -96,8 +94,6 @@
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-
-
 }
 
 .active {
@@ -110,15 +106,11 @@
     font-size: 18px;
 }
 
-
-
-
 .description {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
 }
-
 
 .description textarea {
     width: 100%;
@@ -129,10 +121,6 @@
     margin-left: -4%;
 }
 
-.description.buttons {
-    justify-content: space-between;
-}
-
 .description .save {
     margin-left: 28%;
     background-color: green;
@@ -141,11 +129,9 @@
     border: none;
     cursor: pointer;
     top: 10px;
+
 }
 
-.description h3 {
-    margin-left: -5%;
-}
 
 .cancel {
     position: relative;
