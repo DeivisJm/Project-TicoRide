@@ -1,5 +1,5 @@
 
-function editarViaje(element) {
+function editRide(element) {
     // open Rides
     currentSection.textContent = "Rides";
     viajesView.style.display = "block";
@@ -23,7 +23,7 @@ function editarViaje(element) {
     document.getElementById("end").value = endRides;
 }
 
-function eliminarViaje(link) {
+function deleteRide(link) {
     var row = link.closest('tr'); // Get the current row
     row.remove(); // Delete row
     alert("Viaje eliminado correctamente.");
