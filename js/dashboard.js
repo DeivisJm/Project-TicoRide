@@ -1,23 +1,6 @@
-function addRow() {
-    var table = document.getElementById("ViajesRegistrados").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.rows.length);
-
-    var cell1 = newRow.insertCell(0);
-    var cell2 = newRow.insertCell(1);
-    var cell3 = newRow.insertCell(2);
-    var cell4 = newRow.insertCell(3);
-
-    cell1.innerHTML = "";
-    cell2.innerHTML = "";
-    cell3.innerHTML = "";
-    cell4.innerHTML = '<a onclick="editarViaje(this)" href="#">Edit</a> - <a onclick="eliminarViaje(this)" href="#">Delete</a> - <a onclick="addRow(this)" href="#">Add</a>';
-}
-
-
-
 
 function editarViaje(element) {
-    // Aquí puedes agregar el código para cambiar la visualización de las secciones según el código proporcionado
+    // open Rides
     currentSection.textContent = "Rides";
     viajesView.style.display = "block";
     settingsView.style.display = "none";
@@ -29,48 +12,55 @@ function editarViaje(element) {
     var fila = element.parentNode.parentNode;
     var celdas = fila.getElementsByTagName("td");
 
-    // Obtener el contenido de las celdas correspondientes
+    // get the content of the corresponding cells
     var rideName = celdas[0].innerText;
     var startFrom = celdas[1].innerText;
     var endRides = celdas[2].innerText;
 
-    // Establecer los valores en los campos de entrada y etiquetas deseados
+    // Set the values in the desired input fields and labels
     document.getElementById("rideName").value = rideName;
     document.getElementById("startFrom").value = startFrom;
     document.getElementById("end").value = endRides;
 }
 
 
-function guardarEdicion(element) {
-    var fila = element.closest('td'); // Obtener la fila más cercana al botón que fue clickeado
-    var celdas = fila.querySelectorAll('th'); // Obtener todas las celdas de la fila
+function addEdit() {
+    var fila = document.getElementById("ViajesRegistrados").getElementsByTagName("tbody")[0].rows;
+    var rideName = document.getElementById("rideName").value;
+    var startFrom = document.getElementById("startFrom").value;
+    var endRides = document.getElementById("end").value;
 
-    // Iterar sobre las celdas de la fila para obtener los nuevos valores desde los campos de entrada
-    celdas.forEach(function (celda, indice) {
-        // Ignorar la última celda que contiene los enlaces de editar y eliminar
-        if (indice < celdas.length - 1) {
-            var input = celda.querySelector('input'); // Obtener el campo de entrada de la celda
-            celda.innerText = input.value; // Establecer el contenido de la celda al valor del campo de entrada
+    // Obtener la fila seleccionada
+    var selectedRow = null;
+    for (var i = 0; i < fila.length; i++) {
+        if (fila[i].classList.contains("selected")) {
+            selectedRow = fila[i];
+            break;
         }
-    });
+    }
 
-    // Cambiar el texto del botón de guardar a "Edit" para permitir futuras ediciones
-    element.innerText = 'Save';
-    // Restaurar el evento onclick original de editarViaje para permitir ediciones futuras
-    element.onclick = function () {
-        editarViaje(this);
-    };
+    // Verificar si se ha seleccionado una fila
+    if (selectedRow) {
+        // Obtener las celdas de la fila seleccionada
+        var celdas = selectedRow.getElementsByTagName("td");
 
-    // Aquí puedes agregar el código para cambiar la visualización de las secciones según el código proporcionado
-    currentSection.textContent = "Dashboard";
-    viajesView.style.display = "none";
-    settingsView.style.display = "none";
-    panelView.style.display = "block";
-    dashboardMenu.classList.add("active");
-    settingsMenu.classList.remove("active");
-    ridesMenu.classList.remove("active");
+        // Establecer los valores en las celdas de la fila seleccionada
+        celdas[0].innerText = rideName;
+        celdas[1].innerText = startFrom;
+        celdas[2].innerText = endRides;
+
+        // Cambiar la visualización de las secciones para mostrar el panel de dashboard
+        currentSection.textContent = "Dashboard";
+        viajesView.style.display = "none";
+        settingsView.style.display = "none";
+        panelView.style.display = "block";
+        dashboardMenu.classList.add("active");
+        settingsMenu.classList.remove("active");
+        ridesMenu.classList.remove("active");
+    } else {
+        console.log("No se ha seleccionado ninguna fila para editar");
+    }
 }
-
 
 
 
