@@ -23,57 +23,14 @@ function editarViaje(element) {
     document.getElementById("end").value = endRides;
 }
 
-
-function addEdit() {
-    var fila = document.getElementById("ViajesRegistrados").getElementsByTagName("tbody")[0].rows;
-    var rideName = document.getElementById("rideName").value;
-    var startFrom = document.getElementById("startFrom").value;
-    var endRides = document.getElementById("end").value;
-
-    // Obtener la fila seleccionada
-    var selectedRow = null;
-    for (var i = 0; i < fila.length; i++) {
-        if (fila[i].classList.contains("selected")) {
-            selectedRow = fila[i];
-            break;
-        }
-    }
-
-    // Verificar si se ha seleccionado una fila
-    if (selectedRow) {
-        // Obtener las celdas de la fila seleccionada
-        var celdas = selectedRow.getElementsByTagName("td");
-
-        // Establecer los valores en las celdas de la fila seleccionada
-        celdas[0].innerText = rideName;
-        celdas[1].innerText = startFrom;
-        celdas[2].innerText = endRides;
-
-        // Cambiar la visualización de las secciones para mostrar el panel de dashboard
-        currentSection.textContent = "Dashboard";
-        viajesView.style.display = "none";
-        settingsView.style.display = "none";
-        panelView.style.display = "block";
-        dashboardMenu.classList.add("active");
-        settingsMenu.classList.remove("active");
-        ridesMenu.classList.remove("active");
-    } else {
-        console.log("No se ha seleccionado ninguna fila para editar");
-    }
-}
-
-
-
 function eliminarViaje(link) {
     var row = link.closest('tr'); // Get the current row
     row.remove(); // Delete row
     alert("Viaje eliminado correctamente.");
 }
 
-// Recuperar el nombre de usuario del almacenamiento local
+// Retrieve username from local storage
 var storedUsername = localStorage.getItem('username');
-
-// Establecer el valor del campo de entrada con el nombre de usuario almacenado
 document.getElementById("fullname").value = storedUsername;
 
 
